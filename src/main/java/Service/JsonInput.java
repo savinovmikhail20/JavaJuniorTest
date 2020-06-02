@@ -28,13 +28,13 @@ public class JsonInput {
         try (BufferedReader input = new BufferedReader(new InputStreamReader(new FileInputStream(inputPath), "windows-1251"))) {
 
             JSONObject jsonObject = (JSONObject) parser.parse(input);
-            StatOperation statOperation = new StatOperation(jsonObject);
 
-            return statOperation;
+
+            return new StatOperation(jsonObject);
 
         } catch (IOException e) {
             e.printStackTrace();
-            throw new ProgramException("Не найден файл");
+            throw new ProgramException("Не удается прочитать файл");
         } catch (ParseException e) {
             e.printStackTrace();
             throw new ProgramException("Некорректный json файл");
@@ -51,13 +51,13 @@ public class JsonInput {
             JSONObject jsonObject = (JSONObject) parser.parse(input);
 
             JSONArray array = (JSONArray) jsonObject.get("criterias");
-            SearchOperation searchOperation = new SearchOperation(array);
 
-            return searchOperation;
+
+            return new SearchOperation(array);
 
         } catch (IOException e) {
             e.printStackTrace();
-            throw new ProgramException("Не найден файл");
+            throw new ProgramException("Не удается прочитать файл");
 
         } catch (ParseException e) {
             e.printStackTrace();

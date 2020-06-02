@@ -18,6 +18,8 @@ public class StatOperation {
     private   LocalDate endDate;
     private int workingDays;
     private ArrayList<CustomerStat> customerStats;
+    private int allTotalExpenses;
+    private int AvgExpenses;
 
     public LocalDate getStartDate() {
         return startDate;
@@ -30,14 +32,21 @@ public class StatOperation {
         return customerStats;
     }
 
-    public void setCustomerStats(ArrayList<CustomerStat> customerStats) {
-
-        this.customerStats = customerStats;
-    }
+    public void setCustomerStats(ArrayList<CustomerStat> customerStats) { this.customerStats = customerStats; }
 
     public int getWorkingDays() {
         return workingDays;
     }
+    public int getAllTotalExpenses() { return allTotalExpenses; }
+
+    public void setAllTotalExpenses(int allTotalExpenses) { this.allTotalExpenses = allTotalExpenses;
+    }
+
+    public int getAvgExpenses() { return AvgExpenses;
+    }
+
+    public void setAvgExpenses(int avgExpenses) { AvgExpenses = avgExpenses; }
+
 
 
     public StatOperation(JSONObject jsonObject) throws ProgramException {

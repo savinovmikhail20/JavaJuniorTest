@@ -1,6 +1,7 @@
 package domain;
 
 import Exceptions.ProgramException;
+import domain.search.SearchOperation;
 import domain.stat.CustomerStat;
 import domain.stat.StatOperation;
 
@@ -54,6 +55,35 @@ public class DAO {
     }
 
 
+    // В этом методе на основе уже заготовленных в SearchOperation sql запросов,
+    // из базы данных достаются необходимые данные, которые затем помещаются в помещаются в SearchOperation
+    // в виде объектов класса CriteriasResult
+
+    public void  search(SearchOperation searchOperation) throws ProgramException {
+        try {
+            Statement statement = conn.createStatement();
+            ArrayList<String> sqlQueries= searchOperation.getSqlQueries();
+            for (int i=0; i<sqlQueries.size();i++) {
+                ArrayList<String> customers=new ArrayList<>();
+                ResultSet resultUsers = statement.executeQuery(sqlQueries.get(i));
+                while (resultUsers.next()) {
+                    customers.add(resultUsers.getString("firstName"));
+                    customers.add(resultUsers.getString("lastName"));
+                }
+                searchOperation.addResult(i,customers);
+
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new ProgramException(e.getMessage());
+        }
+
+
+    }
+
+
 
     // В этом методе сначала создается список всех пользователей из базы,
     // затем для каждого пользователя создается список покупок с стоимостью и тотальный стоимостью,
@@ -68,7 +98,7 @@ public class DAO {
 
 
 
-
+        int c=0; int sum=0;
         int id; int totalExpenses;
         String firstName; String lastName;
 
@@ -95,6 +125,8 @@ public class DAO {
                 resultTotalExpenses.next();
 
                 totalExpenses=resultTotalExpenses.getInt("sum");
+                sum=sum+totalExpenses;
+                c++;
                 ResultSet resultPurchases=statement2.executeQuery(sqlPurchases);
                 while (resultPurchases.next()) {
 
@@ -114,5 +146,7 @@ public class DAO {
         }
 
         statOperation.setCustomerStats(customerStats);
+        statOperation.setAllTotalExpenses(sum);
+        statOperation.setAvgExpenses(sum/c);
     }
 }
