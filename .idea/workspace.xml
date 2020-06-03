@@ -7,57 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c7957c9-9e73-471c-8143-ffc1093042e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/JavaJuniorTest_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataBase Dump/dataBaseBackup.backup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JsonFiles/input.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JsonFiles/inputSearch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JsonFiles/inputSearch1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JsonFiles/inputStat.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JsonFiles/newOutput.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JsonFiles/testRu.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JsonFiles/testRu.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JavaJuniorTest.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/Output.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/inputSearch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/inputSearch1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/inputSearch2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/inputSearch3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/inputStat.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/inputStat1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/inputStat2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/inputStat3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/wrongSearch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/wrongSearch1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/wrongSearch2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/wrongSearch3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/wrongStat.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/wrongStat1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/wrongStat2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/wrongStat3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/persistence.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/persistence.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Exceptions/ProgramException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Service/JsonInput.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Service/JsonOutput.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Service/WorkingDaysCounter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/DAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/search/CriteriasResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/search/SearchOperation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/stat/CustomerStat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/domain/stat/StatOperation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/JsonInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/JsonInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/JsonOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/JsonOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/PersistencePropertiesSetter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/WorkingDaysCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/WorkingDaysCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JavaJuniorTest.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JavaJuniorTest.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/Output.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/JsonFiles/Output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/persistence.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/JavaJuniorTest_jar/persistence.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/search/SearchOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/search/SearchOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/stat/StatOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/stat/StatOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/persistence.properties" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -96,22 +51,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/search/CriteriasResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#407#408#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
-                <element signature="e#488#489#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/stat/CustomerStat.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="278">
@@ -120,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="-170">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -153,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/DAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="130" selection-start-line="130" selection-end-line="130" />
+            <state relative-caret-position="357">
+              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -232,14 +171,14 @@
         <option value="$PROJECT_DIR$/src/main/java/domain/search/CriteriasResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/Service/PersistencePropertiesSetter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/persistence.properties" />
-        <option value="$PROJECT_DIR$/persistence.properties" />
         <option value="$PROJECT_DIR$/src/main/java/Service/JsonInput.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/search/SearchOperation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/DAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Service/JsonOutput.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/stat/StatOperation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Service/WorkingDaysCounter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/persistence.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/DAO.java" />
       </list>
     </option>
   </component>
@@ -344,11 +283,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591174575281" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591176807509" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../JuniorTest" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
@@ -396,7 +335,7 @@
       <updated>1591083959357</updated>
       <workItem from="1591083965106" duration="26120000" />
       <workItem from="1591115590167" duration="7850000" />
-      <workItem from="1591162893876" duration="8933000" />
+      <workItem from="1591162893876" duration="10492000" />
     </task>
     <task id="LOCAL-00001" summary="Создан класс чтения данных из файла и базовый класс вывода в файл( пока выводит только сообщение об ошибках). Также созданы класс ошибки, пустые классы операций поиска и статистики.">
       <created>1591090291708</created>
@@ -419,17 +358,23 @@
       <option name="project" value="LOCAL" />
       <updated>1591103720431</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Исправлены ошибки. Добавлен бэкап json, тесты">
+      <created>1591174708230</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591174708230</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42903000" />
+    <option name="totallyTimeSpent" value="44462000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25037822" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25037822" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -437,17 +382,17 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.42389524" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49848714" visible="true" weight="0.060556464" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8986384" weight="0.400982" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848714" weight="0.049099836" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4969743" weight="0.31096563" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49621785" weight="0.47954175" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49621785" visible="true" weight="0.22258593" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50378215" side_tool="true" visible="true" weight="0.22258593" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49546143" weight="0.049099836" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.060556464" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49546143" weight="0.31260228" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -467,7 +412,8 @@
     <MESSAGE value="Создан класс чтения данных из файла и базовый класс вывода в файл( пока выводит только сообщение об ошибках). Также созданы класс ошибки, пустые классы операций поиска и статистики." />
     <MESSAGE value="Добавлена поддержка операции stat:&#10;&#10;Создан класс WorkingDaysCounter, в котором вычисляется количество рабочих дней между датами.&#10;Создан класс CustomerStat, в котором хранятся данные статистики для конкретного покупателя&#10;В класс StatOperation добавлены необходимые поля данных и методы, в том числе и ArrayList&lt;CustomerStat&gt; &#10;Создан класс DAO для получения необходимой информации из базы данных&#10;В класс DAO добавлен метод stat(), который на основе данных в StatOperation создает запрос, получает из базы информацию и заполняет поля в StatOperation" />
     <MESSAGE value="Добавлена поддержка операции search:&#10;Создан класс CriteriasResult, в котором хранятся данные поиска для конкретного критерия&#10;В класс StatOperation добавлены необходимые поля данных и методы, в том числе и ArrayList&lt;CriteriasResult&gt; &#10;В класс DAO добавлен метод search(), который на основе запросов в SearchOperation получает из базы информацию и заполняет поля в SearchOperation&#10;&#10;&#10;&#10;Добавлены методы обработки данных из командной строки:&#10;Создан класс PersistencePropertiesSetter для заполнения properties из командной строки, в методе main написан необходимый код &#10;&#10;Добавлены методы вывода данных в JsonOutput:&#10;Созданы методы write(StatOperation statOperation)  и write(SearchOperation searchOperation)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена поддержка операции search:&#10;Создан класс CriteriasResult, в котором хранятся данные поиска для конкретного критерия&#10;В класс StatOperation добавлены необходимые поля данных и методы, в том числе и ArrayList&lt;CriteriasResult&gt; &#10;В класс DAO добавлен метод search(), который на основе запросов в SearchOperation получает из базы информацию и заполняет поля в SearchOperation&#10;&#10;&#10;&#10;Добавлены методы обработки данных из командной строки:&#10;Создан класс PersistencePropertiesSetter для заполнения properties из командной строки, в методе main написан необходимый код &#10;&#10;Добавлены методы вывода данных в JsonOutput:&#10;Созданы методы write(StatOperation statOperation)  и write(SearchOperation searchOperation)" />
+    <MESSAGE value="Исправлены ошибки. Добавлен бэкап json, тесты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки. Добавлен бэкап json, тесты" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/search/stat/d.java" />
@@ -506,13 +452,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/persistence.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Service/PersistencePropertiesSetter.java" />
-    <entry file="file://$PROJECT_DIR$/persistence.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/search/CriteriasResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -551,16 +490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Service/JsonInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="122" selection-start-line="48" selection-start-column="122" selection-end-line="48" selection-end-column="122" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Service/JsonOutput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-484">
@@ -578,16 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/DAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/stat/StatOperation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -598,10 +517,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/persistence.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Service/JsonInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="122" selection-start-line="48" selection-start-column="122" selection-end-line="48" selection-end-column="122" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="-170">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

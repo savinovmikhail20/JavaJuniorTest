@@ -32,8 +32,8 @@ public class DAO {
 
 
 
-        try (FileInputStream fis = new FileInputStream("E:/JuniorTest/properties/persistence.properties")) {
-
+        try (FileInputStream fis = new FileInputStream(filePath)) {
+            System.out.println(filePath);
             Properties properties = new Properties();
             properties.load(fis);
             url = properties.getProperty("url");
