@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Properties;
 
 public class DAO {
@@ -100,7 +101,7 @@ public class DAO {
     // CustomerStat переопределен метод compareTo()
 
     public void stat(StatOperation statOperation) throws ProgramException {
-        final String SQL_GET_PURCHASES="SELECT  productName,  SUM(Price)   from Customers inner join Purchases ON Customers.id= Purchases.Customer INNER JOIN Products ON Purchases.Product=Products.productName   WHERE Customers.id=%d and Date BETWEEN '%s' and '%s' GROUP BY Products.productName;";
+        final String SQL_GET_PURCHASES="SELECT  productName,  SUM(Price)  as sum  from Customers inner join Purchases ON Customers.id= Purchases.Customer INNER JOIN Products ON Purchases.Product=Products.productName   WHERE Customers.id=%d and Date BETWEEN '%s' and '%s' GROUP BY Products.productName ORDER By sum DESC;";
         final String SQL_GET_TOTAL_EXPENSES="SELECT SUM(Price)  FROM Products INNER JOIN Purchases ON Products.productName=Purchases.Product where Purchases.Customer=%d and Date BETWEEN '%s' and '%s';" ;
         final  String SQL_ALL_USERS="SELECT id,firstName,lastName from Customers;";
         ArrayList<CustomerStat> customerStats =new ArrayList<>();
@@ -118,7 +119,7 @@ public class DAO {
             ResultSet resultAllUsers=statement.executeQuery(SQL_ALL_USERS);
 
             while (resultAllUsers.next()) {
-                HashMap<String, Integer> purchases=new HashMap<>();
+                LinkedHashMap<String, Integer> purchases=new LinkedHashMap<>();
 
                 id=resultAllUsers.getInt("id");
 
