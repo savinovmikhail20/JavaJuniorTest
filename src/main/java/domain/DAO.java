@@ -5,6 +5,7 @@ import domain.search.SearchOperation;
 import domain.stat.CustomerStat;
 import domain.stat.StatOperation;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
@@ -13,7 +14,11 @@ import java.util.HashMap;
 import java.util.Properties;
 
 public class DAO {
+    public void setFilePath(String filePath) {
+        this.filePath= filePath;
+    }
 
+    private String filePath;
 
     private static final String JDBC_DRIVER = "org.postgresql.Driver";
     private static Connection conn;
@@ -24,6 +29,9 @@ public class DAO {
         String url;
         String username;
         String password;
+
+
+
         try (FileInputStream fis = new FileInputStream("E:/JuniorTest/properties/persistence.properties")) {
 
             Properties properties = new Properties();
@@ -49,7 +57,7 @@ public class DAO {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            throw new ProgramException(" Sql ошибка подключения к базе  ");
+            throw new ProgramException("  Sql ошибка подключения к базе   ");
         }
 
     }
@@ -67,8 +75,9 @@ public class DAO {
                 ArrayList<String> customers=new ArrayList<>();
                 ResultSet resultUsers = statement.executeQuery(sqlQueries.get(i));
                 while (resultUsers.next()) {
-                    customers.add(resultUsers.getString("firstName"));
+
                     customers.add(resultUsers.getString("lastName"));
+                    customers.add(resultUsers.getString("firstName"));
                 }
                 searchOperation.addResult(i,customers);
 
@@ -91,8 +100,8 @@ public class DAO {
     // CustomerStat переопределен метод compareTo()
 
     public void stat(StatOperation statOperation) throws ProgramException {
-        final String SQL_GET_PURCHASES="SELECT  productName,  SUM(Price)   from Customers inner join Purchases ON Customers.id= Purchases.CustomerStat INNER JOIN Products ON Purchases.Product=Products.productName   WHERE Customers.id=%o and Date BETWEEN '%s' and '%s' GROUP BY Products.productName;";
-        final String SQL_GET_TOTAL_EXPENSES="SELECT SUM(Price)  FROM Products INNER JOIN Purchases ON Products.productName=Purchases.Product where Purchases.CustomerStat=%o;" ;
+        final String SQL_GET_PURCHASES="SELECT  productName,  SUM(Price)   from Customers inner join Purchases ON Customers.id= Purchases.Customer INNER JOIN Products ON Purchases.Product=Products.productName   WHERE Customers.id=%d and Date BETWEEN '%s' and '%s' GROUP BY Products.productName;";
+        final String SQL_GET_TOTAL_EXPENSES="SELECT SUM(Price)  FROM Products INNER JOIN Purchases ON Products.productName=Purchases.Product where Purchases.Customer=%d and Date BETWEEN '%s' and '%s';" ;
         final  String SQL_ALL_USERS="SELECT id,firstName,lastName from Customers;";
         ArrayList<CustomerStat> customerStats =new ArrayList<>();
 
@@ -115,10 +124,11 @@ public class DAO {
 
                 String sqlPurchases=String.format(SQL_GET_PURCHASES ,id, statOperation.getStartDate().toString(), statOperation.getEndDate().toString());
 
-                String sqlTotalExpenses =String.format(SQL_GET_TOTAL_EXPENSES,id);
+                String sqlTotalExpenses =String.format(SQL_GET_TOTAL_EXPENSES,id, statOperation.getStartDate().toString(), statOperation.getEndDate().toString());
 
                 firstName=resultAllUsers.getString("firstName");
                 lastName=resultAllUsers.getString("lastName");
+
 
                 Statement statement2=conn.createStatement();
                 ResultSet resultTotalExpenses =statement2.executeQuery(sqlTotalExpenses);

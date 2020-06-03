@@ -51,17 +51,28 @@ public class StatOperation {
 
     public StatOperation(JSONObject jsonObject) throws ProgramException {
 
-        String start = (String) jsonObject.get("startDate");
-        String end = (String) jsonObject.get("endDate");
+
         try {
+            String start = (String) jsonObject.get("startDate");
+            String end = (String) jsonObject.get("endDate");
             startDate=  LocalDate.parse(start);
             endDate=  LocalDate.parse(end);
-            workingDays = WorkingDaysCounter.myCalc(LocalDate.parse(start), LocalDate.parse(end));
+
+
+
+            if(endDate.isBefore(startDate)){
+                throw new ProgramException("Неверная дата: первое значение должно быть раньше второго");
+
+            }
+
+            workingDays = WorkingDaysCounter.myCalc(startDate, endDate);
 
         } catch (DateTimeException ex) {
 
             ex.printStackTrace();
             throw new ProgramException("Некорректный формат даты");
+        }catch (NullPointerException ex){
+            throw new ProgramException("Дата не найдена");
         }
 
 

@@ -1,0 +1,25 @@
+{
+   "criterias": [ 
+                   
+                  {"lastName": "Маск"},
+                    {"lastName": "Иванов"},
+                
+                   {"productName": "Маасдам" ,"minTimes": 1}, 
+                     {"productName": "Маасдам" ,"minTimes": 2}, 
+                     {"productName": "Маасдам" ,"minTimes": 3}, 
+
+                    {"productName": "Батон" ,"minTimes": 2},
+                        
+                         {"minExpenses": -1, "maxExpenses": 400},
+
+                              {"lastName": "Sydorov"},
+
+                               {"lastName": "Ivanov"},
+
+                             {"lastName": " "},
+                                {"badCustomers": 0} ,
+                                {"badCustomers": 3} ,
+                                  {"badCustomers": 6} 
+                  
+                                                                                        ]
+                                                                                             }

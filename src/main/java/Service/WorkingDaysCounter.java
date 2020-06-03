@@ -20,6 +20,7 @@ public class WorkingDaysCounter {
         int weekends;            // выходные целых неделях, т.е. без остатка
 
         final int allDays = (int) ChronoUnit.DAYS.between(start, end);
+
         if (allDays > 6) {
 
             if (startW < 6) {
@@ -34,22 +35,20 @@ public class WorkingDaysCounter {
             }
 
             restWithWeekends = 8 - startW + endW;
+
             weekends = 2 * ((allDays + 1 - restWithWeekends) / 7);
             result = allDays + 1 - weekends - (restWithWeekends - rest);
 
-        } else {                                       //  если дней мало, проще пройтись циклом, чем строить множественые if else
-            LocalDate slide = start;
-            result = allDays + 1;
-            if (end.getDayOfWeek().getValue() == 6 || end.getDayOfWeek().getValue() == 7) {
+        }  else {                                       //  если дней мало, проще пройтись циклом, чем строить множественые if else
+            LocalDate slide=start;
+            result=0;
 
-                result--;
-            }
-            while (ChronoUnit.DAYS.between(start, end) != 0) {
-                if (start.getDayOfWeek().getValue() == 6 || start.getDayOfWeek().getValue() == 7) {
+            while(!slide.isAfter(end)){
+                if(slide.getDayOfWeek().getValue()!=6&&slide.getDayOfWeek().getValue()!=7){
 
-                    result--;
+                    result++;
                 }
-                slide = slide.plusDays(1);
+                slide= slide.plusDays(1);
             }
         }
 

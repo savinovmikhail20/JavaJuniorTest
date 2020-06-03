@@ -1,0 +1,12 @@
+{
+   "criterias": [ 
+                   
+                  {"lastName": "Маск"},
+                              
+                   {"productName": "Маасдам" ,"Неправильный критерий": 1}, 
+                                                         
+                         {"minExpenses": -1, "maxExpenses": 400},
+
+                               {"lastName": "Ivanov"},
+                                                                                        ]
+                                                                                             }

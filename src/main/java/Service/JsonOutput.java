@@ -7,9 +7,8 @@ import domain.stat.StatOperation;
 import org.json.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,12 +18,13 @@ import java.util.Map;
 
 public class JsonOutput {
     private String outputPath;
-   // В этом методе в файл выводятся данные об ошибке
+    // В этом методе в файл выводятся данные об ошибке
     public  void errorWrite( String message){
-        try ( FileWriter writer= new FileWriter(outputPath) ) {
+        try ( OutputStreamWriter writer=new OutputStreamWriter(new FileOutputStream(outputPath), "utf-8") ) {
 
             JSONObject jo = new JSONObject();
             jo.put("type", "error");
+            System.out.println(message);
             jo.put("message", message);
 
             writer.write(jo.toString());
@@ -40,10 +40,10 @@ public class JsonOutput {
 
         ArrayList<CustomerStat> customersList = statOperation.getCustomerStats();
         HashMap<String, Integer> purchases;
-        try (FileWriter writer = new FileWriter(outputPath)) {
+        try ( OutputStreamWriter writer=new OutputStreamWriter(new FileOutputStream(outputPath), "utf-8") ){
 
             JSONObject jo = new JSONObject();
-            jo.put("type", statOperation.getWorkingDays());
+            jo.put("type", "stat");
             jo.put("totalDays", statOperation.getWorkingDays());
 
             JSONArray customersJsonArray = new JSONArray();
@@ -53,13 +53,13 @@ public class JsonOutput {
                 JSONObject jsonCustomer = new JSONObject();
                 purchases = customerStat.getPurchases();
 
-                jsonCustomer.put("name", customerStat.getFirstName() + customerStat.getLastName());
+                jsonCustomer.put("name",customerStat.getLastName()  + "  "+ customerStat.getFirstName());
                 for (Map.Entry<String, Integer> entry : purchases.entrySet()) {
-                    System.out.print(customerStat.getFirstName() + "    ");
+
                     String key = entry.getKey();
                     Integer value = entry.getValue();
                     JSONObject product = new JSONObject();
-                    System.out.println(key);
+
                     product.put("productName", key);
                     product.put("expenses", value);
                     purchasesJsonArray.put(product);
@@ -86,10 +86,10 @@ public class JsonOutput {
         ArrayList<CriteriasResult> criteriasResults= searchOperation.getCriteriasResults();
         ArrayList<String> customers;
         JSONObject jo =new JSONObject();
-        jo.put("type","searchOperation");
+        jo.put("type","search");
         JSONArray jsonArrayResults=new JSONArray();
 
-        try ( FileWriter writer= new FileWriter(outputPath) ) {
+        try ( OutputStreamWriter writer=new OutputStreamWriter(new FileOutputStream(outputPath), "utf-8") ) {
             for (CriteriasResult criteriaResults:criteriasResults) {
                 JSONArray jsonArrayCustomers=new JSONArray();
                 JSONObject jsonResult=new JSONObject();

@@ -1,0 +1,13 @@
+{"criterias": 
+
+[ 
+     {"lastName": "Иванов"},
+ 
+                 {"productName": "Минеральная вода", "minTimes": 5}, 
+                              
+                                   {"minExpenses": 112, "maxExpenses": 4000}, 
+                                             
+                                                  {"badCustomers": 2} 
+
+
+]}

@@ -1,0 +1,12 @@
+{
+   "criterias": [ 
+                   
+                  {WRONG HERE: "Маск"},
+                              
+                   {"productName": "Маасдам" ,"minTimes": 1}, 
+                                                         
+                         {"minExpenses": -1, "maxExpenses": 400},
+
+                               {"lastName": "Ivanov"},
+                                                                                        ]
+                                                                                             }

@@ -51,6 +51,9 @@ public class JsonInput {
             JSONObject jsonObject = (JSONObject) parser.parse(input);
 
             JSONArray array = (JSONArray) jsonObject.get("criterias");
+            if(array==null){
+                throw new ProgramException("Критерии не найдены");
+            }
 
 
             return new SearchOperation(array);

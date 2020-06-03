@@ -11,7 +11,7 @@ import java.util.Iterator;
 public class SearchOperation {
 
     private  final String NAME_SQL="  SELECT Customers.id, firstName, lastName FROM Customers    WHERE lastName='%s'; ";
-    private final String  PRODUCTNAME_TIMES_SQL= " select * from( select Customers.id, firstName, lastName, COUNT(Products.productName) from Customers       inner join Purchases ON Customers.id = Purchases.Customer  INNER JOIN Products ON Purchases.Product = Products.productName WHERE Products.productName = '%s' GROUP BY Customers.id UNION SELECT Customers.id, firstName, lastName, 0 as count  from Customers WHERE id NOT IN (SELECT DISTINCT CustomerStat from Purchases Where Product = '%s')) as t WHERE count>=%d;";
+    private final String  PRODUCTNAME_TIMES_SQL= " select * from( select Customers.id, firstName, lastName, COUNT(Products.productName) from Customers       inner join Purchases ON Customers.id = Purchases.Customer  INNER JOIN Products ON Purchases.Product = Products.productName WHERE Products.productName = '%s' GROUP BY Customers.id UNION SELECT Customers.id, firstName, lastName, 0 as count  from Customers WHERE id NOT IN (SELECT DISTINCT Customer from Purchases Where Product = '%s')) as t WHERE count>=%d;";
     private final String MIN_MAX_SQL="SELECT  * FROM ( SELECT Customers.id, firstName, lastName, SUM(Price) FROM Customers inner join Purchases ON Customers.id = Purchases.Customer  INNER JOIN Products ON Purchases.product = Products.productName GROUP BY Customers.id UNION SELECT Customers.id, firstName, lastName, 0 as SUM FROM Customers where id NOT IN (SELECT DISTINCT Customer FROM Purchases)) AS t WHERE SUM> %d AND SUM< %d ;";
     private final String BAD_CUSTOMERS_SQL="( (SELECT id, firstName, lastName, 0 as count from Customers WHERE id NOT  IN(SELECT DISTINCT Customer FROM Purchases)) UNION (SELECT Customers.id, firstName, lastName, count(productName)   from Customers inner join Purchases ON Customers.id= Purchases.Customer   INNER JOIN Products ON Purchases.Product=Products.productName GROUP BY Customers.id)  ) ORDER BY count ASC    LIMIT %d;" ;
 
@@ -69,7 +69,7 @@ public class SearchOperation {
 
 
                         sqlQueries.add(String.format(MIN_MAX_SQL, arrayElem.get("minExpenses"), arrayElem.get("maxExpenses")));
-                        System.out.println(sqlQueries.get(sqlQueries.size() - 1));
+
                         break;
 
                     case "badCustomers":
