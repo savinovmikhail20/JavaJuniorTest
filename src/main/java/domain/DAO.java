@@ -9,10 +9,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Properties;
+import java.util.*;
 
 public class DAO {
     public void setFilePath(String filePath) {
@@ -145,6 +142,8 @@ public class DAO {
 
                 }
                 customerStats.add(new CustomerStat(id,firstName,lastName,totalExpenses,purchases));
+                Collections.sort(customerStats);
+                Collections.reverse(customerStats);
 
 
             }
