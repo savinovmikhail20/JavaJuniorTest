@@ -12,6 +12,9 @@ import java.sql.*;
 import java.util.*;
 
 public class DAO {
+    String url;
+    String username;
+    String password;
     public void setFilePath(String filePath) {
         this.filePath= filePath;
     }
@@ -19,14 +22,12 @@ public class DAO {
     private String filePath;
 
     private static final String JDBC_DRIVER = "org.postgresql.Driver";
-    private static Connection conn;
+
 
     // В этом методе создается подключение к базе данных
     public void initialize() throws ProgramException {
 
-        String url;
-        String username;
-        String password;
+
 
 
 
@@ -45,7 +46,7 @@ public class DAO {
 
         try {
             Class.forName(JDBC_DRIVER);
-            conn = DriverManager.getConnection(url, username, password);
+
 
 
         } catch ( ClassNotFoundException e) {
@@ -53,9 +54,6 @@ public class DAO {
             throw new ProgramException(" Не найден Postgresql драйвер ");
 
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-            throw new ProgramException("  Sql ошибка подключения к базе   ");
         }
 
     }
@@ -66,8 +64,9 @@ public class DAO {
     // в виде объектов класса CriteriasResult
 
     public void  search(SearchOperation searchOperation) throws ProgramException {
-        try {
-            Statement statement = conn.createStatement();
+        try (Connection conn = DriverManager.getConnection(url, username, password);
+             Statement statement=conn.createStatement()){
+
             ArrayList<String> sqlQueries= searchOperation.getSqlQueries();
             for (int i=0; i<sqlQueries.size();i++) {
                 ArrayList<String> customers=new ArrayList<>();
@@ -110,8 +109,10 @@ public class DAO {
         String firstName; String lastName;
 
 
-        try {
+        try(Connection conn = DriverManager.getConnection(url, username, password);
             Statement statement=conn.createStatement();
+            Statement statement2=conn.createStatement()) {
+
 
             ResultSet resultAllUsers=statement.executeQuery(SQL_ALL_USERS);
 
@@ -128,7 +129,7 @@ public class DAO {
                 lastName=resultAllUsers.getString("lastName");
 
 
-                Statement statement2=conn.createStatement();
+
                 ResultSet resultTotalExpenses =statement2.executeQuery(sqlTotalExpenses);
                 resultTotalExpenses.next();
 
